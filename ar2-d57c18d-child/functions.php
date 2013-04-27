@@ -37,76 +37,79 @@ register_sidebar( array(
 
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
-	register_post_type( 'board_of_director',
+	register_post_type( 'person',
 		array(
 			'labels' => array(
-				'name'               => _x( 'Board of Directors', 'post type general name' ),
-				'singular_name'      => _x( 'Board of Director', 'post type singular name' ),
+				'name'               => _x( 'Person', 'post type general name' ),
+				'singular_name'      => _x( 'People', 'post type singular name' ),
 				'add_new'            => __( 'Add New' ),
-				'add_new_item'       => __( 'Add New Board of Director' ),
-				'edit_item'          => __( 'Edit Board of Director' ),
-				'new_item'           => __( 'New Board of Director' ),
-				'all_items'          => __( 'All Board of Directors' ),
-				'view_item'          => __( 'View Board of Director' ),
-				'search_items'       => __( 'Search Board of Directors' ),
-				'not_found'          => __( 'No Board of Directors found' ),
-				'not_found_in_trash' => __( 'No Board of Directors found in the Trash' ),
+				'add_new_item'       => __( 'Add New Person' ),
+				'edit_item'          => __( 'Edit Person' ),
+				'new_item'           => __( 'New Person' ),
+				'all_items'          => __( 'All People' ),
+				'view_item'          => __( 'View Person' ),
+				'search_items'       => __( 'Search People' ),
+				'not_found'          => __( 'No People found' ),
+				'not_found_in_trash' => __( 'No People found in the Trash' ),
 				'parent_item_colon'  => '',
-				'menu_name'          => 'Board of Directors'
+				'menu_name'          => 'People'
 			),
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'board'),
+			'rewrite' => array('slug' => 'people'),
 			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 			'has_archive'   => true,
+			'taxonomies' => array( 'category' ),
 		)
 	);
-	register_post_type( 'educator_profile',
+	register_post_type( 'committee',
 		array(
 			'labels' => array(
-				'name'               => _x( 'Educator Profiles', 'post type general name' ),
-				'singular_name'      => _x( 'Educator Profile', 'post type singular name' ),
+				'name'               => _x( 'Committees', 'post type general name' ),
+				'singular_name'      => _x( 'Committee', 'post type singular name' ),
 				'add_new'            => __( 'Add New' ),
-				'add_new_item'       => __( 'Add New Educator Profile' ),
-				'edit_item'          => __( 'Edit Educator Profile' ),
-				'new_item'           => __( 'New Educator Profile' ),
-				'all_items'          => __( 'All Educator Profiles' ),
-				'view_item'          => __( 'View Educator Profile' ),
-				'search_items'       => __( 'Search Educator Profiles' ),
-				'not_found'          => __( 'No Educator Profiles found' ),
-				'not_found_in_trash' => __( 'No Educator Profiles found in the Trash' ),
+				'add_new_item'       => __( 'Add New Committee' ),
+				'edit_item'          => __( 'Edit Committee' ),
+				'new_item'           => __( 'New Committee' ),
+				'all_items'          => __( 'All Committees' ),
+				'view_item'          => __( 'View Committee' ),
+				'search_items'       => __( 'Search Committees' ),
+				'not_found'          => __( 'No Committees found' ),
+				'not_found_in_trash' => __( 'No Committees found in the Trash' ),
 				'parent_item_colon'  => '',
-				'menu_name'          => 'Educator Profiles'
+				'menu_name'          => 'Committees'
 			),
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'educator_profile'),
+			'rewrite' => array('slug' => 'committee'),
 			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 			'has_archive'   => true,
+			'taxonomies' => array( 'category' ),
 		)
 	);
-	register_post_type( 'sponsor',
+	register_post_type( 'project',
 		array(
 			'labels' => array(
-				'name'               => _x( 'Sponsors', 'post type general name' ),
-				'singular_name'      => _x( 'Sponsor', 'post type singular name' ),
+				'name'               => _x( 'Projects', 'post type general name' ),
+				'singular_name'      => _x( 'Project', 'post type singular name' ),
 				'add_new'            => __( 'Add New' ),
-				'add_new_item'       => __( 'Add New Sponsor' ),
-				'edit_item'          => __( 'Edit Sponsor' ),
-				'new_item'           => __( 'New Sponsor' ),
-				'all_items'          => __( 'All Sponsors' ),
-				'view_item'          => __( 'View Sponsor' ),
-				'search_items'       => __( 'Search Sponsors' ),
-				'not_found'          => __( 'No Sponsors found' ),
-				'not_found_in_trash' => __( 'No Sponsors found in the Trash' ),
+				'add_new_item'       => __( 'Add New Project' ),
+				'edit_item'          => __( 'Edit Project' ),
+				'new_item'           => __( 'New Project' ),
+				'all_items'          => __( 'All Projects' ),
+				'view_item'          => __( 'View Project' ),
+				'search_items'       => __( 'Search Projects' ),
+				'not_found'          => __( 'No Projects found' ),
+				'not_found_in_trash' => __( 'No Projects found in the Trash' ),
 				'parent_item_colon'  => '',
-				'menu_name'          => 'Sponsors'
+				'menu_name'          => 'Projects'
 			),
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'sponsors'),
+			'rewrite' => array('slug' => 'project'),
 			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 			'has_archive'   => true,
+			'taxonomies' => array( 'category' ),
 		)
 	);
 }
