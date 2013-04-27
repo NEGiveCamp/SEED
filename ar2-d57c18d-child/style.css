@@ -25,17 +25,17 @@ Version:        1.0
 
 /* =Category Latest News
 ----------------------------------------------- */
-.category-latest-news article .entry-photo {
+.category article .entry-photo {
 	width: auto;
 	float: left;
 }
 
-.category-latest-news .entry-photo img {
+.category .entry-photo img {
 	width: 99%;
 	height: 99%;
 }
 
-.category-latest-news article .entry-content {
+.category article .entry-content {
 	border-bottom: none;
 }
 

@@ -8,7 +8,13 @@ Category: Latest News
 
 <div id="content" class="section" role="main">
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php $args= array(
+		'post_type'     => 'person',
+		'category_name' => 'board-of-directors',
+	);
+
+$the_query = new WP_Query( $args );
+if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
 	<article id="post-<?php the_ID() ?>" <?php post_class() ?>>
 

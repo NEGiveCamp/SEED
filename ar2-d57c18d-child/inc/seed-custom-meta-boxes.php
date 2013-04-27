@@ -6,7 +6,7 @@ function bod_titles() {
         'bod_title',
         __( 'Board of Director Title', 'Board of Director Title' ),
         'bod_title_content',
-        'board_of_director',
+        'person',
         'side',
         'core'
     );
