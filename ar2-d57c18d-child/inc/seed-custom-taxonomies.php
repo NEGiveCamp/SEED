@@ -1,8 +1,9 @@
 <?php
 
 //hook into the init action and call create_book_taxonomies when it fires
-add_action( 'init', 'create_committee_taxonomies', 0 );
-add_action( 'init', 'create_project_taxonomies', 0 );
+//add_action( 'init', 'create_committee_taxonomies', 0 );
+//add_action( 'init', 'create_project_taxonomies', 0 );
+add_action( 'init', 'create_role_taxonomies', 0 );
 
 //create two taxonomies, genres and writers for the post type "book"
 function create_committee_taxonomies() 
