@@ -2,7 +2,7 @@
 
 <?php wp_reset_query() ?>
 
-<div id="primary" class="aside main-aside sidebar" role="complementary">
+<div id="primary" class="hfeed posts-node" role="complementary">
 <?php ar2_above_sidebar() ?>
 
 	<?php if ( !dynamic_sidebar( 'home-triptych-sidebar' ) ) : ?>
