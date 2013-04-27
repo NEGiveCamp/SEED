@@ -158,9 +158,9 @@ add_action( 'p2p_init', 'my_connection_types' );
 function filter_home_slider( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
 		$home_slider = get_category_by_slug( 'home-slider' );
-        $query->set( 'cat', $home_slider->ID );
-        /*echo"<pre>";var_dump($home_slider);echo"</pre>";
-        die();*/
+        $query->set( 'cat', $home_slider->term_id );
+        echo"<pre>";var_dump($query);echo"</pre>";
+        die();
     }
 }
 add_action( 'pre_get_posts', 'filter_home_slider' );
