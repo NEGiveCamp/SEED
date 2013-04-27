@@ -110,3 +110,21 @@ function create_post_type() {
 		)
 	);
 }
+
+function my_connection_types() {
+	p2p_register_connection_type( 
+		array( 
+		'name' => 'person_committee',
+		'from' => 'person',
+		'to' => 'committee'
+		) 
+	);
+	p2p_register_connection_type( 
+		array( 
+		'name' => 'person_project',
+		'from' => 'person',
+		'to' => 'project'
+		) 
+	);
+}
+add_action( 'p2p_init', 'my_connection_types' );
