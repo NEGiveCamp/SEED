@@ -1,4 +1,5 @@
 <?php
+// Edit
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
 	register_post_type( 'board_of_director',
@@ -14,7 +15,7 @@ function create_post_type() {
 				'view_item'          => __( 'View Board of Director' ),
 				'search_items'       => __( 'Search Board of Directors' ),
 				'not_found'          => __( 'No Board of Directors found' ),
-				'not_found_in_trash' => __( 'No Board of Directors found in the Trash' ), 
+				'not_found_in_trash' => __( 'No Board of Directors found in the Trash' ),
 				'parent_item_colon'  => '',
 				'menu_name'          => 'Board of Directors'
 			),
@@ -51,7 +52,7 @@ function create_post_type() {
 add_action( 'init', 'create_committee_taxonomies', 0 );
 
 //create two taxonomies, genres and writers for the post type "book"
-function create_committee_taxonomies() 
+function create_committee_taxonomies()
 {
   // Add new taxonomy, make it hierarchical (like categories)
   $labels = array(
@@ -61,12 +62,12 @@ function create_committee_taxonomies()
     'all_items'           => __( 'All Committees' ),
     'parent_item'         => __( 'Parent Committee' ),
     'parent_item_colon'   => __( 'Parent Committee:' ),
-    'edit_item'           => __( 'Edit Committee' ), 
+    'edit_item'           => __( 'Edit Committee' ),
     'update_item'         => __( 'Update Committee' ),
     'add_new_item'        => __( 'Add New Committee' ),
     'new_item_name'       => __( 'New Committee Name' ),
     'menu_name'           => __( 'Committees' )
-  ); 	
+  );
 
   $args = array(
     'hierarchical'        => true,
