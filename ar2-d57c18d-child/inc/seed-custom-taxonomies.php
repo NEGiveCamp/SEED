@@ -4,6 +4,7 @@
 //add_action( 'init', 'create_committee_taxonomies', 0 );
 //add_action( 'init', 'create_project_taxonomies', 0 );
 add_action( 'init', 'create_role_taxonomies', 0 );
+add_action( 'init', 'create_type_taxonomies', 0 );
 
 //create two taxonomies, genres and writers for the post type "book"
 function create_committee_taxonomies() 
@@ -91,4 +92,33 @@ function create_role_taxonomies()
   );
 
   register_taxonomy( 'role', array( 'person' ), $args );
+}
+
+function create_type_taxonomies() 
+{
+  // Add new taxonomy, make it hierarchical (like categories)
+  $labels = array(
+    'name'                => _x( 'Types', 'taxonomy general name' ),
+    'singular_name'       => _x( 'Type', 'taxonomy singular name' ),
+    'search_items'        => __( 'Search Types' ),
+    'all_items'           => __( 'All Types' ),
+    'parent_item'         => __( 'Parent Type' ),
+    'parent_item_colon'   => __( 'Parent Type:' ),
+    'edit_item'           => __( 'Edit Type' ), 
+    'update_item'         => __( 'Update Type' ),
+    'add_new_item'        => __( 'Add New Type' ),
+    'new_item_name'       => __( 'New Type Name' ),
+    'menu_name'           => __( 'Types' )
+  ); 	
+
+  $args = array(
+    'hierarchical'        => true,
+    'labels'              => $labels,
+    'show_ui'             => true,
+    'show_admin_column'   => true,
+    'query_var'           => true,
+    'rewrite'             => array( 'slug' => 'types' )
+  );
+
+  register_taxonomy( 'type', array( 'sponsor' ), $args );
 }

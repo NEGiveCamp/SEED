@@ -109,6 +109,30 @@ function create_post_type() {
 			'has_archive'   => true
 		)
 	);
+	register_post_type( 'sponsor',
+		array(
+			'labels' => array(
+				'name'               => _x( 'Sponsors', 'post type general name' ),
+				'singular_name'      => _x( 'Sponsor', 'post type singular name' ),
+				'add_new'            => __( 'Add New' ),
+				'add_new_item'       => __( 'Add New Sponsor' ),
+				'edit_item'          => __( 'Edit Sponsor' ),
+				'new_item'           => __( 'New Sponsor' ),
+				'all_items'          => __( 'All Sponsor' ),
+				'view_item'          => __( 'View Sponsor' ),
+				'search_items'       => __( 'Search Sponsors' ),
+				'not_found'          => __( 'No Sponsors found' ),
+				'not_found_in_trash' => __( 'No Sponsors found in the Trash' ),
+				'parent_item_colon'  => '',
+				'menu_name'          => 'Sponsors'
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'sponsor'),
+			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+			'has_archive'   => true
+		)
+	);
 }
 
 function my_connection_types() {
@@ -130,3 +154,13 @@ function my_connection_types() {
 	}
 }
 add_action( 'p2p_init', 'my_connection_types' );
+
+function filter_home_slider( $query ) {
+	if ( $query->is_home() && $query->is_main_query() ) {
+		$home_slider = get_category_by_slug( 'home-slider' );
+        $query->set( 'cat', $home_slider->ID );
+        /*echo"<pre>";var_dump($home_slider);echo"</pre>";
+        die();*/
+    }
+}
+add_action( 'pre_get_posts', 'filter_home_slider' );
