@@ -16,7 +16,7 @@
 <?php if ( !$paged ) : ?>
 
 <?php ar2_render_zone( 'home' ) ?>
-
+<?php get_sidebar('home-triptych-sidebar'); ?>
 <?php if ( is_active_sidebar( 'Bottom Content #1' ) ) : ?>
 <div class="bottom-sidebar" id="bottom-content-1" role="complementary">
 	<?php if ( !dynamic_sidebar( 'Bottom Content #1' ) ) : ?>
@@ -57,6 +57,5 @@ if ( $section->query->max_num_pages > 1 )
 
 <?php ar2_below_content() ?>
 </div><!-- #content -->
-    
-<?php get_sidebar('home-triptych-sidebar'); ?>
+
 <?php get_footer(); ?>
