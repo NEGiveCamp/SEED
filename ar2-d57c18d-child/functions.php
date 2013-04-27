@@ -3,6 +3,10 @@
 require( __DIR__ . '/inc/seed-custom-taxonomies.php' );
 require( __DIR__ . '/inc/seed-custom-meta-boxes.php' );
 
+// Load additional image size
+add_image_size( 'biography', 240, 320, true );
+add_image_size( 'biography_thumb', 160, 240, true );
+
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
 	register_post_type( 'board_of_director',
@@ -42,7 +46,7 @@ function create_post_type() {
 				'view_item'          => __( 'View Educator Profile' ),
 				'search_items'       => __( 'Search Educator Profiles' ),
 				'not_found'          => __( 'No Educator Profiles found' ),
-				'not_found_in_trash' => __( 'No Educator Profiles found in the Trash' ), 
+				'not_found_in_trash' => __( 'No Educator Profiles found in the Trash' ),
 				'parent_item_colon'  => '',
 				'menu_name'          => 'Educator Profiles'
 			),
@@ -66,7 +70,7 @@ function create_post_type() {
 				'view_item'          => __( 'View Sponsor' ),
 				'search_items'       => __( 'Search Sponsors' ),
 				'not_found'          => __( 'No Sponsors found' ),
-				'not_found_in_trash' => __( 'No Sponsors found in the Trash' ), 
+				'not_found_in_trash' => __( 'No Sponsors found in the Trash' ),
 				'parent_item_colon'  => '',
 				'menu_name'          => 'Sponsors'
 			),

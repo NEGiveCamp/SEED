@@ -9,3 +9,19 @@ Version:        1.0
 */
 
 @import url("../ar2-d57c18d/style.css");
+
+
+.page-template-directors-php article .entry-photo {
+	width: 120px;
+	height: 160px;
+	float: left;
+}
+
+.page-template-directors-php article  .entry-photo img {
+	width: 99%;
+	height: 99%;
+}
+
+.page-template-directors-php article .entry-content {
+	border-bottom: none;
+}
