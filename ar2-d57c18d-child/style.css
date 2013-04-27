@@ -41,28 +41,28 @@ Version:        1.0
 
 /* =Board of directors page template
 ----------------------------------------------- */
-.post-type-archive-board_of_director article .entry-photo {
+.tax-role article .entry-photo {
 	width: auto;
 	float: left;
 }
 
-.post-type-archive-board_of_director  .entry-photo img {
+.tax-role  .entry-photo img {
 	width: 99%;
 	height: 99%;
 }
 
-.post-type-archive-board_of_director article .entry-content {
+.tax-role article .entry-content {
 	border-bottom: none;
 }
 
 /* =Board of directors single
 ----------------------------------------------- */
-.single-board_of_director article .entry-photo {
+.single article .entry-photo {
 	width: auto;
 	float: left;
 }
 
-.single-board_of_director .entry-photo img {
+.single .entry-photo img {
 	width: 99%;
 	height: 99%;
 }

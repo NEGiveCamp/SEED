@@ -12,7 +12,7 @@ Category: Latest News
 		'post_type'     => 'person',
 		'tax_query' => array(
 			array(
-				'taxonomy' => 'person',
+				'taxonomy' => 'role',
 				'field' => 'slug',
 				'terms' => 'board-of-directors',
 			)
