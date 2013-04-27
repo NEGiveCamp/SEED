@@ -54,7 +54,7 @@ if ( $section->query->max_num_pages > 1 )
 </div><!-- #archive-posts -->
 
 <?php endif; ?>
-
+<?php get_sidebar(); ?>
 <?php ar2_below_content() ?>
 </div><!-- #content -->
 
