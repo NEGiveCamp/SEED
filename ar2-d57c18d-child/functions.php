@@ -21,28 +21,56 @@ function create_post_type() {
 			'public' => true,
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'board'),
+			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+			'has_archive'   => true,
 		)
 	);
 	register_post_type( 'educator_profile',
 		array(
 			'labels' => array(
-				'name' => __( 'Educator Profiles' ),
-				'singular_name' => __( 'Educator Profile' )
+				'name'               => _x( 'Educator Profiles', 'post type general name' ),
+				'singular_name'      => _x( 'Educator Profile', 'post type singular name' ),
+				'add_new'            => __( 'Add New' ),
+				'add_new_item'       => __( 'Add New Educator Profile' ),
+				'edit_item'          => __( 'Edit Educator Profile' ),
+				'new_item'           => __( 'New Educator Profile' ),
+				'all_items'          => __( 'All Educator Profiles' ),
+				'view_item'          => __( 'View Educator Profile' ),
+				'search_items'       => __( 'Search Educator Profiles' ),
+				'not_found'          => __( 'No Educator Profiles found' ),
+				'not_found_in_trash' => __( 'No Educator Profiles found in the Trash' ), 
+				'parent_item_colon'  => '',
+				'menu_name'          => 'Educator Profiles'
 			),
 			'public' => true,
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'educator_profile'),
+			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+			'has_archive'   => true,
 		)
 	);
 	register_post_type( 'sponsor',
 		array(
 			'labels' => array(
-				'name' => __( 'Sponsors' ),
-				'singular_name' => __( 'Sponsor' )
+				'name'               => _x( 'Sponsors', 'post type general name' ),
+				'singular_name'      => _x( 'Sponsor', 'post type singular name' ),
+				'add_new'            => __( 'Add New' ),
+				'add_new_item'       => __( 'Add New Sponsor' ),
+				'edit_item'          => __( 'Edit Sponsor' ),
+				'new_item'           => __( 'New Sponsor' ),
+				'all_items'          => __( 'All Sponsors' ),
+				'view_item'          => __( 'View Sponsor' ),
+				'search_items'       => __( 'Search Sponsors' ),
+				'not_found'          => __( 'No Sponsors found' ),
+				'not_found_in_trash' => __( 'No Sponsors found in the Trash' ), 
+				'parent_item_colon'  => '',
+				'menu_name'          => 'Sponsors'
 			),
 			'public' => true,
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'sponsors'),
+			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+			'has_archive'   => true,
 		)
 	);
 }
