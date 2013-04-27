@@ -2,13 +2,13 @@
 
 add_action( 'add_meta_boxes', 'bod_titles' );
 function bod_titles() {
-    add_meta_box( 
+    add_meta_box(
         'bod_title',
         __( 'Board of Director Title', 'Board of Director Title' ),
         'bod_title_content',
         'board_of_director',
         'side',
-        'high'
+        'core'
     );
 }
 
@@ -22,7 +22,7 @@ function bod_title_content( $post ){
 add_action( 'save_post', 'bod_title_save' );
 function bod_title_save( $post_id ) {
 
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 	return;
 
 /*	if ( 'page' == $_POST['post_type'] ) {
@@ -32,6 +32,7 @@ function bod_title_save( $post_id ) {
 		if ( !current_user_can( 'edit_post', $post_id ) )
 		return;
 	}*/
-	$bod_title = $_POST['bod_title'];
+	$bod_title = !empty( $_POST['bod_title'] ) ? $_POST['bod_title'] : '';
+
 	update_post_meta( $post_id, 'bod_title', $bod_title );
 }
