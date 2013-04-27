@@ -4,8 +4,23 @@ require( __DIR__ . '/inc/seed-custom-taxonomies.php' );
 require( __DIR__ . '/inc/seed-custom-meta-boxes.php' );
 
 // Load additional image size
-add_image_size( 'biography', 240, 320, true );
-add_image_size( 'biography_thumb', 160, 240, true );
+add_image_size( 'single_feature', 320 );
+add_image_size( 'single_thumb', 240 );
+add_image_size( 'biography', 240 );
+add_image_size( 'biography_thumb', 160 );
+
+/**
+ * Register widgetized areas
+ */
+register_sidebar( array(
+		'name' => __( 'Latest News Sidebar', 'lin' ),
+		'id' => 'latest-news-sidebar',
+		'description' => 'This sidebar will only display on the Latest News page.',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h1 class="widget-title">',
+		'after_title' => '</h1>',
+) );
 
 add_action( 'init', 'create_post_type' );
 function create_post_type() {

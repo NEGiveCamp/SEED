@@ -11,17 +11,58 @@ Version:        1.0
 @import url("../ar2-d57c18d/style.css");
 
 
-.page-template-directors-php article .entry-photo {
-	width: 120px;
-	height: 160px;
+/* =Single posts
+----------------------------------------------- */
+.single-post article .entry-photo {
+	width: auto;
+}
+
+/* =Page
+----------------------------------------------- */
+.page article .entry-header {
+	border-bottom: none;
+}
+
+/* =Category Latest News
+----------------------------------------------- */
+.category-latest-news article .entry-photo {
+	width: auto;
 	float: left;
 }
 
-.page-template-directors-php article  .entry-photo img {
+.category-latest-news .entry-photo img {
 	width: 99%;
 	height: 99%;
 }
 
-.page-template-directors-php article .entry-content {
+.category-latest-news article .entry-content {
 	border-bottom: none;
+}
+
+/* =Board of directors page template
+----------------------------------------------- */
+.post-type-archive-board_of_director article .entry-photo {
+	width: auto;
+	float: left;
+}
+
+.post-type-archive-board_of_director  .entry-photo img {
+	width: 99%;
+	height: 99%;
+}
+
+.post-type-archive-board_of_director article .entry-content {
+	border-bottom: none;
+}
+
+/* =Board of directors single
+----------------------------------------------- */
+.single-board_of_director article .entry-photo {
+	width: auto;
+	float: left;
+}
+
+.single-board_of_director .entry-photo img {
+	width: 99%;
+	height: 99%;
 }
