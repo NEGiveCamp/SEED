@@ -31,7 +31,7 @@ function create_committee_taxonomies()
     'rewrite'             => array( 'slug' => 'committees' )
   );
 
-  register_taxonomy( 'committee', array( 'board_of_director' ), $args );
+  register_taxonomy( 'committee', array( 'person' ), $args );
 }
 
 function create_project_taxonomies() 
@@ -60,5 +60,34 @@ function create_project_taxonomies()
     'rewrite'             => array( 'slug' => 'projects' )
   );
 
-  register_taxonomy( 'project', array( 'educator_profile' ), $args );
+  register_taxonomy( 'project', array( 'person' ), $args );
+}
+
+function create_role_taxonomies() 
+{
+  // Add new taxonomy, make it hierarchical (like categories)
+  $labels = array(
+    'name'                => _x( 'Roles', 'taxonomy general name' ),
+    'singular_name'       => _x( 'Role', 'taxonomy singular name' ),
+    'search_items'        => __( 'Search Roles' ),
+    'all_items'           => __( 'All Roles' ),
+    'parent_item'         => __( 'Parent Role' ),
+    'parent_item_colon'   => __( 'Parent Role:' ),
+    'edit_item'           => __( 'Edit Role' ), 
+    'update_item'         => __( 'Update Role' ),
+    'add_new_item'        => __( 'Add New Role' ),
+    'new_item_name'       => __( 'New Role Name' ),
+    'menu_name'           => __( 'Roles' )
+  ); 	
+
+  $args = array(
+    'hierarchical'        => true,
+    'labels'              => $labels,
+    'show_ui'             => true,
+    'show_admin_column'   => true,
+    'query_var'           => true,
+    'rewrite'             => array( 'slug' => 'roles' )
+  );
+
+  register_taxonomy( 'role', array( 'person' ), $args );
 }

@@ -58,8 +58,7 @@ function create_post_type() {
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'people'),
 			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-			'has_archive'   => true,
-			'taxonomies' => array( 'category' ),
+			'has_archive'   => true
 		)
 	);
 	register_post_type( 'committee',
@@ -83,8 +82,7 @@ function create_post_type() {
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'committee'),
 			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-			'has_archive'   => true,
-			'taxonomies' => array( 'category' ),
+			'has_archive'   => true
 		)
 	);
 	register_post_type( 'project',
@@ -108,8 +106,7 @@ function create_post_type() {
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'project'),
 			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-			'has_archive'   => true,
-			'taxonomies' => array( 'category' ),
+			'has_archive'   => true
 		)
 	);
 }
