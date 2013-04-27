@@ -1,6 +1,7 @@
 <?php
 // Edit
 require( __DIR__ . '/inc/seed-custom-taxonomies.php' );
+require( __DIR__ . '/inc/seed-custom-meta-boxes.php' );
 
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
