@@ -13,7 +13,7 @@ add_image_size( 'biography_thumb', 160 );
  * Register widgetized areas
  */
 register_sidebar( array(
-		'name' => __( 'Latest News Sidebar', 'lin' ),
+		'name' => 'Latest News Sidebar',
 		'id' => 'latest-news-sidebar',
 		'description' => 'This sidebar will only display on the Latest News page.',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
