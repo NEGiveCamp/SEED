@@ -36,9 +36,5 @@ Category: Latest News
 <?php endif; ?>
 
 </div><!-- #content -->
-THEME FOR NEWS
-<?php
-global $wp_registered_sidebars;
-error_log( var_export( $wp_registered_sidebars, true ) );
 get_sidebar( 'latest-news-sidebar' ); ?>
 <?php get_footer(); ?>
